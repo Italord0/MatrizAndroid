@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultFragment">
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/resultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/m1a11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="@string/a11"
+        app:layout_constraintEnd_toStartOf="@+id/txtResultado"
+        app:layout_constraintTop_toTopOf="@+id/m1a12" />
+
+    <TextView
+        android:id="@+id/m1a12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/a12"
+        app:layout_constraintEnd_toEndOf="@id/txtResultado"
+        app:layout_constraintStart_toStartOf="@id/txtResultado"
+        app:layout_constraintTop_toBottomOf="@id/txtResultado" />
+
+    <TextView
+        android:id="@+id/m1a13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="@string/a13"
+        app:layout_constraintStart_toEndOf="@+id/txtResultado"
+        app:layout_constraintTop_toTopOf="@id/m1a12" />
+
+    <TextView
+        android:id="@+id/m1a21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/a11"
+        app:layout_constraintEnd_toEndOf="@+id/m1a11"
+        app:layout_constraintStart_toStartOf="@+id/m1a11"
+        app:layout_constraintTop_toTopOf="@id/m1a22" />
+
+    <TextView
+        android:id="@+id/m1a22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/a12"
+        app:layout_constraintEnd_toEndOf="@+id/m1a12"
+        app:layout_constraintStart_toStartOf="@+id/m1a12"
+        app:layout_constraintTop_toBottomOf="@id/m1a12" />
+
+    <TextView
+        android:id="@+id/m1a23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/a13"
+        app:layout_constraintEnd_toEndOf="@+id/m1a13"
+        app:layout_constraintStart_toStartOf="@+id/m1a13"
+        app:layout_constraintTop_toBottomOf="@id/m1a13"
+        tools:layout_editor_absoluteY="53dp" />
+
+    <TextView
+        android:id="@+id/m1a31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/a11"
+        app:layout_constraintEnd_toEndOf="@+id/m1a21"
+        app:layout_constraintStart_toStartOf="@+id/m1a21"
+        app:layout_constraintTop_toTopOf="@id/m1a32" />
+
+    <TextView
+        android:id="@+id/m1a32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/a12"
+        app:layout_constraintEnd_toEndOf="@+id/m1a22"
+        app:layout_constraintStart_toStartOf="@+id/m1a22"
+        app:layout_constraintTop_toBottomOf="@id/m1a22" />
+
+    <TextView
+        android:id="@+id/m1a33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="@string/a13"
+        app:layout_constraintEnd_toEndOf="@+id/m1a23"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/m1a23"
+        app:layout_constraintTop_toTopOf="@id/m1a32" />
+
+
+</android.support.constraint.ConstraintLayout>
