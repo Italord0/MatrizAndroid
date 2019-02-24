@@ -7,7 +7,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText a11, a12, a13, a21, a22, a23, a31, a32, a33, multiplicarNumero;
+    private EditText a11, a12, a13, a21, a22, a23, a31, a32, a33, multiplicarNumero, elevadoNumero;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void initViews() {
         multiplicarNumero = findViewById(R.id.multiplicar_numero);
+        elevadoNumero = findViewById(R.id.elevar_numero);
 
         a11 = findViewById(R.id.m1a11);
         a12 = findViewById(R.id.m1a12);
@@ -102,6 +103,95 @@ public class MainActivity extends AppCompatActivity {
             iA33 = 0;
         } else {
             iA33 = Integer.parseInt(a33.getText().toString()) * multiplier;
+        }
+
+        ResultFragment resultFragment = new ResultFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("a11", Integer.toString(iA11));
+        bundle.putString("a12", Integer.toString(iA12));
+        bundle.putString("a13", Integer.toString(iA13));
+        bundle.putString("a21", Integer.toString(iA21));
+        bundle.putString("a22", Integer.toString(iA22));
+        bundle.putString("a23", Integer.toString(iA23));
+        bundle.putString("a31", Integer.toString(iA31));
+        bundle.putString("a32", Integer.toString(iA32));
+        bundle.putString("a33", Integer.toString(iA33));
+        resultFragment.setArguments(bundle);
+
+        resultFragment.show((MainActivity.this).getSupportFragmentManager(), "Result Dialog");
+    }
+
+    public void onElevado(View v) {
+        double power;
+        int iA11;
+        int iA12;
+        int iA13;
+        int iA21;
+        int iA22;
+        int iA23;
+        int iA31;
+        int iA32;
+        int iA33;
+
+        if (elevadoNumero.getText().length() == 0) {
+            power = 0;
+        } else {
+            power = Integer.parseInt(elevadoNumero.getText().toString());
+        }
+
+
+        if (a11.getText().length() == 0) {
+            iA11 = 0;
+        } else {
+            iA11 = (int) Math.pow(Double.parseDouble(a11.getText().toString()),power);
+        }
+
+        if (a12.getText().length() == 0) {
+            iA12 = 0;
+        } else {
+            iA12 = (int) Math.pow(Double.parseDouble(a12.getText().toString()),power);
+        }
+
+        if (a13.getText().length() == 0) {
+            iA13 = 0;
+        } else {
+            iA13 = (int) Math.pow(Double.parseDouble(a13.getText().toString()),power);
+        }
+
+        if (a21.getText().length() == 0) {
+            iA21 = 0;
+        } else {
+            iA21 = (int) Math.pow(Double.parseDouble(a21.getText().toString()),power);
+        }
+
+        if (a22.getText().length() == 0) {
+            iA22 = 0;
+        } else {
+            iA22 = (int) Math.pow(Double.parseDouble(a22.getText().toString()),power);
+        }
+
+        if (a23.getText().length() == 0) {
+            iA23 = 0;
+        } else {
+            iA23 = (int) Math.pow(Double.parseDouble(a23.getText().toString()),power);
+        }
+
+        if (a31.getText().length() == 0) {
+            iA31 = 0;
+        } else {
+            iA31 = (int) Math.pow(Double.parseDouble(a31.getText().toString()),power);
+        }
+
+        if (a32.getText().length() == 0) {
+            iA32 = 0;
+        } else {
+            iA32 = (int) Math.pow(Double.parseDouble(a32.getText().toString()),power);
+        }
+
+        if (a33.getText().length() == 0) {
+            iA33 = 0;
+        } else {
+            iA33 = (int) Math.pow(Double.parseDouble(a33.getText().toString()),power);
         }
 
         ResultFragment resultFragment = new ResultFragment();

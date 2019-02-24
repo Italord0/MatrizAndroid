@@ -270,4 +270,27 @@
         app:layout_constraintStart_toEndOf="@id/btn_multiplicar"
         app:layout_constraintTop_toTopOf="@+id/btn_multiplicar" />
 
+    <Button
+        android:id="@+id/btn_elevado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onElevado"
+        android:text="@string/elevado_a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_multiplicar" />
+
+    <EditText
+        android:id="@+id/elevar_numero"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:hint="@string/number0"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_elevado"
+        app:layout_constraintStart_toEndOf="@id/btn_elevado"
+        app:layout_constraintTop_toTopOf="@+id/btn_elevado" />
+
 </android.support.constraint.ConstraintLayout>
