@@ -7,12 +7,241 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/txtMatriz1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/matriz_a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/m1a11"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:hint="@string/a11"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/m1a12"
+        app:layout_constraintTop_toBottomOf="@+id/txtMatriz1" />
+
+    <EditText
+        android:id="@+id/m1a12"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/a12"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/txtMatriz1"
+        app:layout_constraintStart_toStartOf="@+id/txtMatriz1"
+        app:layout_constraintTop_toBottomOf="@+id/txtMatriz1" />
+
+    <EditText
+        android:id="@+id/m1a13"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/a13"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@id/m1a12"
+        app:layout_constraintTop_toBottomOf="@+id/txtMatriz1" />
+
+    <EditText
+        android:id="@+id/m1a21"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:hint="@string/a21"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/m1a12"
+        app:layout_constraintTop_toBottomOf="@+id/m1a11" />
+
+    <EditText
+        android:id="@+id/m1a22"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/a22"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/txtMatriz1"
+        app:layout_constraintStart_toStartOf="@+id/txtMatriz1"
+        app:layout_constraintTop_toBottomOf="@+id/m1a12" />
+
+    <EditText
+        android:id="@+id/m1a23"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/a23"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@id/m1a12"
+        app:layout_constraintTop_toBottomOf="@+id/m1a13" />
+
+    <EditText
+        android:id="@+id/m1a31"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:hint="@string/a31"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/m1a12"
+        app:layout_constraintTop_toBottomOf="@+id/m1a21" />
+
+    <EditText
+        android:id="@+id/m1a32"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/a32"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/txtMatriz1"
+        app:layout_constraintStart_toStartOf="@+id/txtMatriz1"
+        app:layout_constraintTop_toBottomOf="@+id/m1a22" />
+
+    <EditText
+        android:id="@+id/m1a33"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/a33"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@id/m1a12"
+        app:layout_constraintTop_toBottomOf="@+id/m1a23" />
+
+    <TextView
+        android:id="@+id/txtMatriz2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/matriz_b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/m1a32" />
+
+    <EditText
+        android:id="@+id/m1b11"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:hint="@string/b11"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/m1b12"
+        app:layout_constraintTop_toBottomOf="@+id/txtMatriz2" />
+
+    <EditText
+        android:id="@+id/m1b12"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/b12"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/txtMatriz2"
+        app:layout_constraintStart_toStartOf="@+id/txtMatriz2"
+        app:layout_constraintTop_toBottomOf="@+id/txtMatriz2" />
+
+    <EditText
+        android:id="@+id/m1b13"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/b13"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@id/m1b12"
+        app:layout_constraintTop_toBottomOf="@+id/txtMatriz2" />
+
+    <EditText
+        android:id="@+id/m1b21"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:hint="@string/a21"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/m1b12"
+        app:layout_constraintTop_toBottomOf="@+id/m1b11" />
+
+    <EditText
+        android:id="@+id/m1b22"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/b22"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/txtMatriz2"
+        app:layout_constraintStart_toStartOf="@+id/txtMatriz2"
+        app:layout_constraintTop_toBottomOf="@+id/m1b12" />
+
+    <EditText
+        android:id="@+id/m1b23"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/b23"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@id/m1b12"
+        app:layout_constraintTop_toBottomOf="@+id/m1b13" />
+
+    <EditText
+        android:id="@+id/m1b31"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:hint="@string/b31"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/m1b12"
+        app:layout_constraintTop_toBottomOf="@+id/m1b21" />
+
+    <EditText
+        android:id="@+id/m1b32"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/b32"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/txtMatriz2"
+        app:layout_constraintStart_toStartOf="@+id/txtMatriz2"
+        app:layout_constraintTop_toBottomOf="@+id/m1b22" />
+
+    <EditText
+        android:id="@+id/m1b33"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/b33"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@id/m1b12"
+        app:layout_constraintTop_toBottomOf="@+id/m1b23" />
 
 </android.support.constraint.ConstraintLayout>

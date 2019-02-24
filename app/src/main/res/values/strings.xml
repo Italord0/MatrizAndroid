@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">MatrizAndroid</string>
+    <string name="app_name">Matriz</string>
+    <string name="matriz_a">Matriz a</string>
+    <string name="a11">a11</string>
+    <string name="a12">a12</string>
+    <string name="a13">a13</string>
+    <string name="a21">a21</string>
+    <string name="a22">a22</string>
+    <string name="a23">a23</string>
+    <string name="a31">a31</string>
+    <string name="a32">a32</string>
+    <string name="a33">a33</string>
+
+    <string name="matriz_b">Matriz b</string>
+    <string name="b11">b11</string>
+    <string name="b12">b12</string>
+    <string name="b13">b13</string>
+    <string name="b21">b21</string>
+    <string name="b22">b22</string>
+    <string name="b23">b23</string>
+    <string name="b31">b31</string>
+    <string name="b32">b32</string>
+    <string name="b33">b33</string>
+
 </resources>
