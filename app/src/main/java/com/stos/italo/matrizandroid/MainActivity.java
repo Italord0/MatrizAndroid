@@ -143,55 +143,55 @@ public class MainActivity extends AppCompatActivity {
         if (a11.getText().length() == 0) {
             iA11 = 0;
         } else {
-            iA11 = (int) Math.pow(Double.parseDouble(a11.getText().toString()),power);
+            iA11 = (int) Math.pow(Double.parseDouble(a11.getText().toString()), power);
         }
 
         if (a12.getText().length() == 0) {
             iA12 = 0;
         } else {
-            iA12 = (int) Math.pow(Double.parseDouble(a12.getText().toString()),power);
+            iA12 = (int) Math.pow(Double.parseDouble(a12.getText().toString()), power);
         }
 
         if (a13.getText().length() == 0) {
             iA13 = 0;
         } else {
-            iA13 = (int) Math.pow(Double.parseDouble(a13.getText().toString()),power);
+            iA13 = (int) Math.pow(Double.parseDouble(a13.getText().toString()), power);
         }
 
         if (a21.getText().length() == 0) {
             iA21 = 0;
         } else {
-            iA21 = (int) Math.pow(Double.parseDouble(a21.getText().toString()),power);
+            iA21 = (int) Math.pow(Double.parseDouble(a21.getText().toString()), power);
         }
 
         if (a22.getText().length() == 0) {
             iA22 = 0;
         } else {
-            iA22 = (int) Math.pow(Double.parseDouble(a22.getText().toString()),power);
+            iA22 = (int) Math.pow(Double.parseDouble(a22.getText().toString()), power);
         }
 
         if (a23.getText().length() == 0) {
             iA23 = 0;
         } else {
-            iA23 = (int) Math.pow(Double.parseDouble(a23.getText().toString()),power);
+            iA23 = (int) Math.pow(Double.parseDouble(a23.getText().toString()), power);
         }
 
         if (a31.getText().length() == 0) {
             iA31 = 0;
         } else {
-            iA31 = (int) Math.pow(Double.parseDouble(a31.getText().toString()),power);
+            iA31 = (int) Math.pow(Double.parseDouble(a31.getText().toString()), power);
         }
 
         if (a32.getText().length() == 0) {
             iA32 = 0;
         } else {
-            iA32 = (int) Math.pow(Double.parseDouble(a32.getText().toString()),power);
+            iA32 = (int) Math.pow(Double.parseDouble(a32.getText().toString()), power);
         }
 
         if (a33.getText().length() == 0) {
             iA33 = 0;
         } else {
-            iA33 = (int) Math.pow(Double.parseDouble(a33.getText().toString()),power);
+            iA33 = (int) Math.pow(Double.parseDouble(a33.getText().toString()), power);
         }
 
         ResultFragment resultFragment = new ResultFragment();
@@ -208,5 +208,100 @@ public class MainActivity extends AppCompatActivity {
         resultFragment.setArguments(bundle);
 
         resultFragment.show((MainActivity.this).getSupportFragmentManager(), "Result Dialog");
+    }
+
+    public void onDeterminante(View v) {
+        int iA11;
+        int iA12;
+        int iA13;
+        int iA21;
+        int iA22;
+        int iA23;
+        int iA31;
+        int iA32;
+        int iA33;
+
+        if (a11.getText().length() == 0) {
+            iA11 = 0;
+        } else {
+            iA11 = Integer.parseInt(a11.getText().toString());
+        }
+
+        if (a12.getText().length() == 0) {
+            iA12 = 0;
+        } else {
+            iA12 = Integer.parseInt(a12.getText().toString());
+        }
+
+        if (a13.getText().length() == 0) {
+            iA13 = 0;
+        } else {
+            iA13 = Integer.parseInt(a13.getText().toString());
+        }
+
+        if (a21.getText().length() == 0) {
+            iA21 = 0;
+        } else {
+            iA21 = Integer.parseInt(a21.getText().toString());
+        }
+
+        if (a22.getText().length() == 0) {
+            iA22 = 0;
+        } else {
+            iA22 = Integer.parseInt(a22.getText().toString());
+        }
+
+        if (a23.getText().length() == 0) {
+            iA23 = 0;
+        } else {
+            iA23 = Integer.parseInt(a23.getText().toString());
+        }
+
+        if (a31.getText().length() == 0) {
+            iA31 = 0;
+        } else {
+            iA31 = Integer.parseInt(a31.getText().toString());
+        }
+
+        if (a32.getText().length() == 0) {
+            iA32 = 0;
+        } else {
+            iA32 = Integer.parseInt(a32.getText().toString());
+        }
+
+        if (a33.getText().length() == 0) {
+            iA33 = 0;
+        } else {
+            iA33 = Integer.parseInt(a33.getText().toString());
+        }
+
+
+        int diagonalprincipal1 = iA11 * iA22 * iA33;
+        int diagonalprincipal2 = iA12 * iA23 * iA31;
+        int diagonalprincipal3 = iA13 * iA21 * iA32;
+
+        int diagonalsecundaria1 = iA12 * iA21 * iA33;
+        int diagonalsecundaria2 = iA11 * iA23 * iA32;
+        int diagonalsecundaria3 = iA13 * iA22 * iA31;
+
+        int determinante = diagonalprincipal1 + diagonalprincipal2 + diagonalprincipal3 - diagonalsecundaria1 - diagonalsecundaria2 - diagonalsecundaria3;
+
+        ResultFragment resultFragment = new ResultFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("a11", Integer.toString(iA11));
+        bundle.putString("a12", Integer.toString(iA12));
+        bundle.putString("a13", Integer.toString(iA13));
+        bundle.putString("a21", Integer.toString(iA21));
+        bundle.putString("a22", Integer.toString(iA22));
+        bundle.putString("a23", Integer.toString(iA23));
+        bundle.putString("a31", Integer.toString(iA31));
+        bundle.putString("a32", Integer.toString(iA32));
+        bundle.putString("a33", Integer.toString(iA33));
+        bundle.putString("mode", "sarrus");
+        bundle.putString("determinante", Integer.toString(determinante));
+        resultFragment.setArguments(bundle);
+
+        resultFragment.show((MainActivity.this).getSupportFragmentManager(), "Result Dialog");
+
     }
 }

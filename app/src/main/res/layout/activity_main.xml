@@ -25,7 +25,7 @@
         android:layout_marginEnd="8dp"
         android:gravity="center"
         android:hint="@string/number0"
-        android:inputType="number"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toStartOf="@+id/txtMatriz1"
         app:layout_constraintTop_toBottomOf="@+id/txtMatriz1" />
 
@@ -36,7 +36,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:hint="@string/number0"
-        android:inputType="number"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="@+id/txtMatriz1"
         app:layout_constraintStart_toStartOf="@+id/txtMatriz1"
         app:layout_constraintTop_toBottomOf="@+id/txtMatriz1" />
@@ -49,7 +49,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:hint="@string/number0"
-        android:inputType="number"
+        android:inputType="numberSigned"
         app:layout_constraintStart_toEndOf="@+id/txtMatriz1"
         app:layout_constraintTop_toBottomOf="@+id/txtMatriz1" />
 
@@ -61,7 +61,7 @@
         android:layout_marginEnd="8dp"
         android:gravity="center"
         android:hint="@string/number0"
-        android:inputType="number"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="@+id/m1a11"
         app:layout_constraintStart_toStartOf="@+id/m1a11"
         app:layout_constraintTop_toBottomOf="@+id/m1a11" />
@@ -75,7 +75,7 @@
         android:layout_marginEnd="8dp"
         android:gravity="center"
         android:hint="@string/number0"
-        android:inputType="number"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="@+id/m1a12"
         app:layout_constraintStart_toStartOf="@+id/m1a12"
         app:layout_constraintTop_toBottomOf="@+id/m1a12" />
@@ -87,7 +87,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:hint="@string/number0"
-        android:inputType="number"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="@+id/m1a13"
         app:layout_constraintStart_toStartOf="@id/m1a13"
         app:layout_constraintTop_toBottomOf="@+id/m1a13" />
@@ -99,7 +99,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:hint="@string/number0"
-        android:inputType="number"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="@+id/m1a21"
         app:layout_constraintStart_toStartOf="@+id/m1a21"
         app:layout_constraintTop_toBottomOf="@+id/m1a21" />
@@ -111,7 +111,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:hint="@string/number0"
-        android:inputType="number"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="@+id/m1a12"
         app:layout_constraintStart_toStartOf="@+id/m1a12"
         app:layout_constraintTop_toBottomOf="@+id/m1a22" />
@@ -123,7 +123,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:hint="@string/number0"
-        android:inputType="number"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="@+id/m1a23"
         app:layout_constraintStart_toStartOf="@id/m1a23"
         app:layout_constraintTop_toBottomOf="@+id/m1a23" />
@@ -292,5 +292,16 @@
         app:layout_constraintBottom_toBottomOf="@+id/btn_elevado"
         app:layout_constraintStart_toEndOf="@id/btn_elevado"
         app:layout_constraintTop_toTopOf="@+id/btn_elevado" />
+
+    <Button
+        android:id="@+id/btn_determinante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onDeterminante"
+        android:text="@string/determinante"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_elevado" />
 
 </android.support.constraint.ConstraintLayout>
