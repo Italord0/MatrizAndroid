@@ -12,10 +12,6 @@ public class ResultFragment extends DialogFragment {
 
     private TextView a11, a12, a13, a21, a22, a23, a31, a32, a33;
 
-    public ResultFragment() {
-
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
