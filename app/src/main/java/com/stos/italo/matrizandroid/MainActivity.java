@@ -304,4 +304,44 @@ public class MainActivity extends AppCompatActivity {
         resultFragment.show((MainActivity.this).getSupportFragmentManager(), "Result Dialog");
 
     }
+
+    public void onTransposta(View v) {
+        int iA11;
+        int iA12;
+        int iA13;
+        int iA21;
+        int iA22;
+        int iA23;
+        int iA31;
+        int iA32;
+        int iA33;
+
+        iA11 = Integer.parseInt(a11.getText().toString());
+        iA12 = Integer.parseInt(a21.getText().toString());
+        iA13 = Integer.parseInt(a31.getText().toString());
+
+        iA21 = Integer.parseInt(a12.getText().toString());
+        iA22 = Integer.parseInt(a22.getText().toString());
+        iA23 = Integer.parseInt(a32.getText().toString());
+
+        iA31 = Integer.parseInt(a31.getText().toString());
+        iA32 = Integer.parseInt(a23.getText().toString());
+        iA33 = Integer.parseInt(a33.getText().toString());
+
+        ResultFragment resultFragment = new ResultFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("a11", Integer.toString(iA11));
+        bundle.putString("a12", Integer.toString(iA12));
+        bundle.putString("a13", Integer.toString(iA13));
+        bundle.putString("a21", Integer.toString(iA21));
+        bundle.putString("a22", Integer.toString(iA22));
+        bundle.putString("a23", Integer.toString(iA23));
+        bundle.putString("a31", Integer.toString(iA31));
+        bundle.putString("a32", Integer.toString(iA32));
+        bundle.putString("a33", Integer.toString(iA33));
+        resultFragment.setArguments(bundle);
+
+        resultFragment.show((MainActivity.this).getSupportFragmentManager(), "Result Dialog");
+
+    }
 }

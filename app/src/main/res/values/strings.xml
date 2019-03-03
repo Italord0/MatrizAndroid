@@ -28,5 +28,6 @@
     <string name="number0">0</string>
     <string name="equals">=</string>
     <string name="resultado">Resultado</string>
+    <string name="transposta">Transposta</string>
 
 </resources>
