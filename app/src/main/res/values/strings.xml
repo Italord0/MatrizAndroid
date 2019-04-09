@@ -26,6 +26,10 @@
     <string name="elevado_a">Elevado a</string>
     <string name="determinante">Determinante</string>
     <string name="number0">0</string>
+    <string name="aplusb">A + B</string>
+    <string name="aminusb">A - B</string>
+    <string name="bminusa">B - A</string>
+    <string name="atimesb">A x B</string>
     <string name="equals">=</string>
     <string name="resultado">Resultado</string>
     <string name="transposta">Transposta</string>

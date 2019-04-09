@@ -1,319 +1,476 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtMatriz1"
+    <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/matriz_a"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/m1a11"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:hint="@string/number0"
-        android:inputType="numberSigned"
-        app:layout_constraintEnd_toStartOf="@+id/txtMatriz1"
-        app:layout_constraintTop_toBottomOf="@+id/txtMatriz1" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/m1a12"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:hint="@string/number0"
-        android:inputType="numberSigned"
-        app:layout_constraintEnd_toEndOf="@+id/txtMatriz1"
-        app:layout_constraintStart_toStartOf="@+id/txtMatriz1"
-        app:layout_constraintTop_toBottomOf="@+id/txtMatriz1" />
+            <TextView
+                android:id="@+id/txtMatriz1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/matriz_a"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/m1a13"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:hint="@string/number0"
-        android:inputType="numberSigned"
-        app:layout_constraintStart_toEndOf="@+id/txtMatriz1"
-        app:layout_constraintTop_toBottomOf="@+id/txtMatriz1" />
+            <EditText
+                android:id="@+id/m1a11"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toStartOf="@+id/txtMatriz1"
+                app:layout_constraintTop_toBottomOf="@+id/txtMatriz1" />
 
-    <EditText
-        android:id="@+id/m1a21"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:hint="@string/number0"
-        android:inputType="numberSigned"
-        app:layout_constraintEnd_toEndOf="@+id/m1a11"
-        app:layout_constraintStart_toStartOf="@+id/m1a11"
-        app:layout_constraintTop_toBottomOf="@+id/m1a11" />
+            <EditText
+                android:id="@+id/m1a12"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="@+id/txtMatriz1"
+                app:layout_constraintStart_toStartOf="@+id/txtMatriz1"
+                app:layout_constraintTop_toBottomOf="@+id/txtMatriz1" />
 
-    <EditText
-        android:id="@+id/m1a22"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:hint="@string/number0"
-        android:inputType="numberSigned"
-        app:layout_constraintEnd_toEndOf="@+id/m1a12"
-        app:layout_constraintStart_toStartOf="@+id/m1a12"
-        app:layout_constraintTop_toBottomOf="@+id/m1a12" />
+            <EditText
+                android:id="@+id/m1a13"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintStart_toEndOf="@+id/txtMatriz1"
+                app:layout_constraintTop_toBottomOf="@+id/txtMatriz1" />
 
-    <EditText
-        android:id="@+id/m1a23"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:hint="@string/number0"
-        android:inputType="numberSigned"
-        app:layout_constraintEnd_toEndOf="@+id/m1a13"
-        app:layout_constraintStart_toStartOf="@id/m1a13"
-        app:layout_constraintTop_toBottomOf="@+id/m1a13" />
+            <EditText
+                android:id="@+id/m1a21"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="@+id/m1a11"
+                app:layout_constraintStart_toStartOf="@+id/m1a11"
+                app:layout_constraintTop_toBottomOf="@+id/m1a11" />
 
-    <EditText
-        android:id="@+id/m1a31"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:hint="@string/number0"
-        android:inputType="numberSigned"
-        app:layout_constraintEnd_toEndOf="@+id/m1a21"
-        app:layout_constraintStart_toStartOf="@+id/m1a21"
-        app:layout_constraintTop_toBottomOf="@+id/m1a21" />
+            <EditText
+                android:id="@+id/m1a22"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="@+id/m1a12"
+                app:layout_constraintStart_toStartOf="@+id/m1a12"
+                app:layout_constraintTop_toBottomOf="@+id/m1a12" />
 
-    <EditText
-        android:id="@+id/m1a32"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:hint="@string/number0"
-        android:inputType="numberSigned"
-        app:layout_constraintEnd_toEndOf="@+id/m1a12"
-        app:layout_constraintStart_toStartOf="@+id/m1a12"
-        app:layout_constraintTop_toBottomOf="@+id/m1a22" />
+            <EditText
+                android:id="@+id/m1a23"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="@+id/m1a13"
+                app:layout_constraintStart_toStartOf="@id/m1a13"
+                app:layout_constraintTop_toBottomOf="@+id/m1a13" />
 
-    <EditText
-        android:id="@+id/m1a33"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:hint="@string/number0"
-        android:inputType="numberSigned"
-        app:layout_constraintEnd_toEndOf="@+id/m1a23"
-        app:layout_constraintStart_toStartOf="@id/m1a23"
-        app:layout_constraintTop_toBottomOf="@+id/m1a23" />
+            <EditText
+                android:id="@+id/m1a31"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="@+id/m1a21"
+                app:layout_constraintStart_toStartOf="@+id/m1a21"
+                app:layout_constraintTop_toBottomOf="@+id/m1a21" />
 
-    <!--<TextView-->
-    <!--android:id="@+id/txtMatriz2"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginStart="8dp"-->
-    <!--android:layout_marginTop="32dp"-->
-    <!--android:text="@string/matriz_b"-->
-    <!--app:layout_constraintEnd_toEndOf="parent"-->
-    <!--app:layout_constraintStart_toStartOf="parent"-->
-    <!--app:layout_constraintTop_toBottomOf="@id/m1a32" />-->
+            <EditText
+                android:id="@+id/m1a32"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="@+id/m1a12"
+                app:layout_constraintStart_toStartOf="@+id/m1a12"
+                app:layout_constraintTop_toBottomOf="@+id/m1a22" />
 
-    <!--<EditText-->
-    <!--android:id="@+id/m1b11"-->
-    <!--android:layout_width="70dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:layout_marginEnd="8dp"-->
-    <!--android:gravity="center"-->
-    <!--android:hint="@string/b11"-->
-    <!--android:inputType="number"-->
-    <!--app:layout_constraintEnd_toStartOf="@+id/m1b12"-->
-    <!--app:layout_constraintTop_toBottomOf="@+id/txtMatriz2" />-->
+            <EditText
+                android:id="@+id/m1a33"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="@+id/m1a23"
+                app:layout_constraintStart_toStartOf="@id/m1a23"
+                app:layout_constraintTop_toBottomOf="@+id/m1a23" />
 
-    <!--<EditText-->
-    <!--android:id="@+id/m1b12"-->
-    <!--android:layout_width="70dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:gravity="center"-->
-    <!--android:hint="@string/b12"-->
-    <!--android:inputType="number"-->
-    <!--app:layout_constraintEnd_toEndOf="@+id/txtMatriz2"-->
-    <!--app:layout_constraintStart_toStartOf="@+id/txtMatriz2"-->
-    <!--app:layout_constraintTop_toBottomOf="@+id/txtMatriz2" />-->
 
-    <!--<EditText-->
-    <!--android:id="@+id/m1b13"-->
-    <!--android:layout_width="70dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginStart="8dp"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:gravity="center"-->
-    <!--android:hint="@string/b13"-->
-    <!--android:inputType="number"-->
-    <!--app:layout_constraintStart_toEndOf="@id/m1b12"-->
-    <!--app:layout_constraintTop_toBottomOf="@+id/txtMatriz2" />-->
+            <Button
+                android:id="@+id/btn_multiplicar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:onClick="onMultiplicar"
+                android:text="@string/multiplicar_por"
+                android:textSize="9sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/m1a31" />
 
-    <!--<EditText-->
-    <!--android:id="@+id/m1b21"-->
-    <!--android:layout_width="70dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:layout_marginEnd="8dp"-->
-    <!--android:gravity="center"-->
-    <!--android:hint="@string/a21"-->
-    <!--android:inputType="number"-->
-    <!--app:layout_constraintEnd_toStartOf="@+id/m1b12"-->
-    <!--app:layout_constraintTop_toBottomOf="@+id/m1b11" />-->
+            <EditText
+                android:id="@+id/multiplicar_numero"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_multiplicar"
+                app:layout_constraintStart_toEndOf="@id/btn_multiplicar"
+                app:layout_constraintTop_toTopOf="@+id/btn_multiplicar" />
 
-    <!--<EditText-->
-    <!--android:id="@+id/m1b22"-->
-    <!--android:layout_width="70dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:gravity="center"-->
-    <!--android:hint="@string/b22"-->
-    <!--android:inputType="number"-->
-    <!--app:layout_constraintEnd_toEndOf="@+id/txtMatriz2"-->
-    <!--app:layout_constraintStart_toStartOf="@+id/txtMatriz2"-->
-    <!--app:layout_constraintTop_toBottomOf="@+id/m1b12" />-->
+            <Button
+                android:id="@+id/btn_elevado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:onClick="onElevado"
+                android:text="@string/elevado_a"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="@+id/multiplicar_numero"
+                app:layout_constraintStart_toEndOf="@+id/multiplicar_numero"
+                app:layout_constraintTop_toTopOf="@+id/multiplicar_numero" />
 
-    <!--<EditText-->
-    <!--android:id="@+id/m1b23"-->
-    <!--android:layout_width="70dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginStart="8dp"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:gravity="center"-->
-    <!--android:hint="@string/b23"-->
-    <!--android:inputType="number"-->
-    <!--app:layout_constraintStart_toEndOf="@id/m1b12"-->
-    <!--app:layout_constraintTop_toBottomOf="@+id/m1b13" />-->
+            <EditText
+                android:id="@+id/elevar_numero"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_elevado"
+                app:layout_constraintStart_toEndOf="@id/btn_elevado"
+                app:layout_constraintTop_toTopOf="@+id/btn_elevado" />
 
-    <!--<EditText-->
-    <!--android:id="@+id/m1b31"-->
-    <!--android:layout_width="70dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:layout_marginEnd="8dp"-->
-    <!--android:gravity="center"-->
-    <!--android:hint="@string/b31"-->
-    <!--android:inputType="number"-->
-    <!--app:layout_constraintEnd_toStartOf="@+id/m1b12"-->
-    <!--app:layout_constraintTop_toBottomOf="@+id/m1b21" />-->
+            <Button
+                android:id="@+id/btn_determinante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:onClick="onDeterminante"
+                android:text="@string/determinante"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_elevado" />
 
-    <!--<EditText-->
-    <!--android:id="@+id/m1b32"-->
-    <!--android:layout_width="70dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:gravity="center"-->
-    <!--android:hint="@string/b32"-->
-    <!--android:inputType="number"-->
-    <!--app:layout_constraintEnd_toEndOf="@+id/txtMatriz2"-->
-    <!--app:layout_constraintStart_toStartOf="@+id/txtMatriz2"-->
-    <!--app:layout_constraintTop_toBottomOf="@+id/m1b22" />-->
+            <Button
+                android:id="@+id/btn_transposta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:onClick="onTransposta"
+                android:text="@string/transposta"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_determinante"
+                app:layout_constraintStart_toEndOf="@+id/btn_determinante"
+                app:layout_constraintTop_toTopOf="@+id/btn_determinante" />
 
-    <!--<EditText-->
-    <!--android:id="@+id/m1b33"-->
-    <!--android:layout_width="70dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginStart="8dp"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:gravity="center"-->
-    <!--android:hint="@string/b33"-->
-    <!--android:inputType="number"-->
-    <!--app:layout_constraintStart_toEndOf="@id/m1b12"-->
-    <!--app:layout_constraintTop_toBottomOf="@+id/m1b23" />-->
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_transposta" />
 
-    <Button
-        android:id="@+id/btn_multiplicar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:onClick="onMultiplicar"
-        android:text="@string/multiplicar_por"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/m1a31" />
+            <Button
+                android:id="@+id/btn_soma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:onClick="onSoma"
+                android:text="@string/aplusb"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_transposta" />
 
-    <EditText
-        android:id="@+id/multiplicar_numero"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:gravity="center"
-        android:hint="@string/number0"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_multiplicar"
-        app:layout_constraintStart_toEndOf="@id/btn_multiplicar"
-        app:layout_constraintTop_toTopOf="@+id/btn_multiplicar" />
+            <Button
+                android:id="@+id/btn_subtracao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:onClick="onSubtracao"
+                android:text="@string/aminusb"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_soma"
+                app:layout_constraintEnd_toStartOf="@+id/btn_multiplicacao"
+                app:layout_constraintStart_toEndOf="@id/btn_soma"
+                app:layout_constraintTop_toTopOf="@+id/btn_soma" />
 
-    <Button
-        android:id="@+id/btn_elevado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:onClick="onElevado"
-        android:text="@string/elevado_a"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_multiplicar" />
+            <Button
+                android:id="@+id/btn_subtracao_inversa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:onClick="onSubtracaoInversa"
+                android:text="@string/bminusa"
+                app:layout_constraintEnd_toStartOf="@+id/btn_multiplicacao"
+                app:layout_constraintStart_toEndOf="@id/btn_soma"
+                app:layout_constraintTop_toBottomOf="@+id/btn_subtracao" />
 
-    <EditText
-        android:id="@+id/elevar_numero"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:gravity="center"
-        android:hint="@string/number0"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_elevado"
-        app:layout_constraintStart_toEndOf="@id/btn_elevado"
-        app:layout_constraintTop_toTopOf="@+id/btn_elevado" />
+            <Button
+                android:id="@+id/btn_multiplicacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:onClick="onMultiplicacao"
+                android:text="@string/atimesb"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_soma"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_soma" />
 
-    <Button
-        android:id="@+id/btn_determinante"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:onClick="onDeterminante"
-        android:text="@string/determinante"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_elevado" />
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_subtracao_inversa" />
 
-    <Button
-        android:id="@+id/btn_transposta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:onClick="onTransposta"
-        android:text="@string/transposta"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_determinante" />
+            <TextView
+                android:id="@+id/txtMatriz2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/matriz_b"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+            <EditText
+                android:id="@+id/m1b11"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toStartOf="@+id/txtMatriz2"
+                app:layout_constraintTop_toBottomOf="@+id/txtMatriz2" />
+
+            <EditText
+                android:id="@+id/m1b12"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="@+id/txtMatriz2"
+                app:layout_constraintStart_toStartOf="@+id/txtMatriz2"
+                app:layout_constraintTop_toBottomOf="@+id/txtMatriz2" />
+
+            <EditText
+                android:id="@+id/m1b13"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintStart_toEndOf="@+id/txtMatriz2"
+                app:layout_constraintTop_toBottomOf="@+id/txtMatriz2" />
+
+            <EditText
+                android:id="@+id/m1b21"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="@+id/m1b11"
+                app:layout_constraintStart_toStartOf="@+id/m1b11"
+                app:layout_constraintTop_toBottomOf="@+id/m1b11" />
+
+            <EditText
+                android:id="@+id/m1b22"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="@+id/txtMatriz2"
+                app:layout_constraintStart_toStartOf="@+id/txtMatriz2"
+                app:layout_constraintTop_toBottomOf="@+id/m1b12" />
+
+            <EditText
+                android:id="@+id/m1b23"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="@+id/m1b13"
+                app:layout_constraintStart_toStartOf="@+id/m1b13"
+                app:layout_constraintTop_toBottomOf="@+id/m1b13" />
+
+            <EditText
+                android:id="@+id/m1b31"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="@+id/m1b21"
+                app:layout_constraintStart_toStartOf="@+id/m1b21"
+                app:layout_constraintTop_toBottomOf="@+id/m1b21" />
+
+            <EditText
+                android:id="@+id/m1b32"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="@+id/m1b22"
+                app:layout_constraintStart_toStartOf="@+id/m1b22"
+                app:layout_constraintTop_toBottomOf="@+id/m1b22" />
+
+            <EditText
+                android:id="@+id/m1b33"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintEnd_toEndOf="@+id/m1b23"
+                app:layout_constraintStart_toStartOf="@+id/m1b23"
+                app:layout_constraintTop_toBottomOf="@+id/m1b23" />
+
+            <Button
+                android:id="@+id/btn_multiplicar_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:onClick="onMultiplicarB"
+                android:text="@string/multiplicar_por"
+                android:textSize="9sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/m1b31" />
+
+            <EditText
+                android:id="@+id/multiplicar_numero_b"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_multiplicar_b"
+                app:layout_constraintStart_toEndOf="@id/btn_multiplicar_b"
+                app:layout_constraintTop_toTopOf="@+id/btn_multiplicar_b" />
+
+            <Button
+                android:id="@+id/btn_elevado_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:onClick="onElevadoB"
+                android:text="@string/elevado_a"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="@+id/multiplicar_numero_b"
+                app:layout_constraintStart_toEndOf="@+id/multiplicar_numero_b"
+                app:layout_constraintTop_toTopOf="@+id/multiplicar_numero_b" />
+
+            <EditText
+                android:id="@+id/elevar_numero_b"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:hint="@string/number0"
+                android:inputType="numberSigned"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_elevado_b"
+                app:layout_constraintStart_toEndOf="@id/btn_elevado_b"
+                app:layout_constraintTop_toTopOf="@+id/btn_elevado_b" />
+
+            <Button
+                android:id="@+id/btn_determinante_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:onClick="onDeterminanteB"
+                android:text="@string/determinante"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/elevar_numero_b" />
+
+            <Button
+                android:id="@+id/btn_transposta_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:onClick="onTranspostaB"
+                android:text="@string/transposta"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_determinante_b"
+                app:layout_constraintStart_toEndOf="@+id/btn_determinante_b"
+                app:layout_constraintTop_toTopOf="@+id/btn_determinante_b" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>
